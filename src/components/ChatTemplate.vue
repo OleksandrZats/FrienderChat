@@ -56,6 +56,18 @@ export default {
       this.messages.push(message);
     },
   },
+  mounted() {
+    if (localStorage.messages) {
+      this.messages = localStorage.messages;
+    } else {
+      this.messages = [];
+    }
+  },
+  watch: {
+    color(newMessages) {
+      localStorage.messages = newMessages;
+    },
+  },
 };
 </script>
 
