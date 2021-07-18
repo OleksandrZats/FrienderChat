@@ -46,11 +46,11 @@ export default {
 .chatHeader__name {
   font-weight: bold;
   font-size: calc(16px + var(--deltaFontSize));
-  line-height: 24px;
+  line-height: calc(24px + var(--deltaFontSize));
 }
 .chatHeader__role {
   font-size: calc(12px + var(--deltaFontSize));
-  line-height: 16px;
+  line-height: calc(16px + var(--deltaFontSize));
 }
 .chatHeader__arrow {
   background: transparent;

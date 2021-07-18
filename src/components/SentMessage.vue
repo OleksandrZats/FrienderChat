@@ -33,7 +33,7 @@ export default {
 .sentMessage__text {
   font-size: calc(16px + var(--deltaFontSize));
 
-  line-height: 24px;
+  line-height: calc(24px + var(--deltaFontSize));
 
   display: flex;
   align-items: center;
@@ -43,7 +43,7 @@ export default {
 
 .sentMessage__time {
   font-size: calc(12px + var(--deltaFontSize));
-  line-height: 16px;
+  line-height: calc(16px + var(--deltaFontSize));
 
   display: flex;
   align-items: center;
