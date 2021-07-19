@@ -55,7 +55,7 @@ export default {
     if (localStorage.color) {
       this.color = localStorage.color;
     } else {
-      this.color = "#A44EB2";
+      this.color = "#3B5A9C";
     }
     if (localStorage.font) {
       this.font = localStorage.font;
@@ -142,5 +142,6 @@ export default {
   font-size: 16px;
   font-weight: bold;
   border: 4px solid red;
+  cursor: pointer;
 }
 </style>

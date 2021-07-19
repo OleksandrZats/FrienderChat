@@ -5,7 +5,7 @@
       <h2 class="chatHeader__name">{{ this.name }}</h2>
       <p class="chatHeader__role">Support</p>
     </div>
-    <button class="chatHeader__arrow">
+    <button type="button" class="chatHeader__arrow" @click="onArowClick()">
       <img src="@/assets/Vector.svg" alt="" />
     </button>
   </div>
@@ -20,6 +20,11 @@ export default {
     };
   },
   components: {},
+  methods: {
+    onArowClick() {
+      this.$emit("onArowClick", {});
+    },
+  },
 };
 </script>
 

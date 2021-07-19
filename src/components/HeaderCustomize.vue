@@ -1,5 +1,5 @@
 <template>
-  <h3>Admin settings</h3>
+  <h3 class="HCHeader">Admin settings</h3>
   <label for="adminName"></label>
   <input
     class="nameInput"
@@ -27,6 +27,9 @@ export default {
 };
 </script>
 <style>
+.HCHeader {
+  margin: 24px 24px 0 24px;
+}
 .nameInput {
   background: #f9f9f9;
   border: 1px solid #adb6c8;

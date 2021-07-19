@@ -1,13 +1,12 @@
 <template>
-  <form class="form">
+  <form class="form" @submit.prevent="onMessageSend(message)">
     <input
       type="text"
       class="form__input"
       placeholder="Your message..."
       v-model="message"
-      @keydown.enter.prevent="onMessageSend(message)"
     />
-    <button type="button" class="form__submit" @click="onMessageSend(message)">
+    <button type="submit" class="form__submit">
       <img src="@/assets/Send.svg" alt="" />
     </button>
   </form>

@@ -8,7 +8,15 @@
           '--font: ' + this.font + '; --deltaFontSize: ' + this.deltaFont + 'px'
         "
       >
-        <ChatHeader :color="this.color" :name="this.name" />
+        <ChatHeader
+          :color="this.color"
+          :name="this.name"
+          @onArowClick="
+            () => {
+              isFlex = !isFlex;
+            }
+          "
+        />
         <div class="chat__messeges">
           <ReceiveMessage />
           <SentMessage :color="this.color" />

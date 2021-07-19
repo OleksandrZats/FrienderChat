@@ -2,34 +2,14 @@
   <div class="customizeComponent">
     <div class="menu">
       <ul>
-        <li>
+        <li v-for="tab in tabs" :key="tab">
           <button
             type="button"
             class="menu__link"
-            @click="setActive('colors')"
-            :class="{ active: isActive('colors') }"
+            @click="setActive(tab)"
+            :class="{ active: isActive(tab) }"
           >
-            Colors
-          </button>
-        </li>
-        <li>
-          <button
-            type="button"
-            class="menu__link"
-            @click="setActive('fonts')"
-            :class="{ active: isActive('fonts') }"
-          >
-            Fonts
-          </button>
-        </li>
-        <li>
-          <button
-            type="button"
-            class="menu__link"
-            @click="setActive('header')"
-            :class="{ active: isActive('header') }"
-          >
-            Header
+            {{ tab }}
           </button>
         </li>
       </ul>
@@ -92,6 +72,7 @@ export default {
     return {
       activeItem: "",
       size: 0,
+      tabs: ["colors", "fonts", "header"],
     };
   },
   mounted() {
@@ -154,6 +135,8 @@ export default {
   cursor: pointer;
   text-align: start;
   border-radius: 8px;
+
+  text-transform: capitalize;
 }
 .active {
   background: #3b5a9c;
